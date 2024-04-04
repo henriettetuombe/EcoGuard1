@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/*"
+to = "home.php"
+status = 200
