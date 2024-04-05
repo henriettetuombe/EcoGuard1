@@ -8,8 +8,7 @@ EcoGuard is a comprehensive environmental monitoring and protection platform aim
 
 ### Prerequisites
 
-- PHP installed on your system
-- MySQL installed and running on your machine
+- XAMPP installed on your system (includes PHP and MySQL)
 - Git installed on your system
 
 ### Installation
@@ -28,19 +27,28 @@ EcoGuard is a comprehensive environmental monitoring and protection platform aim
 
 ### Database Setup
 
-1. Create a new MySQL database for EcoGuard.
+1. Start the Apache and MySQL services using XAMPP control panel.
 
-2. Import the SQL schema provided in `database_schema.sql` into your MySQL database.
+2. Create a new database for EcoGuard using phpMyAdmin or any MySQL client of your choice.
+
+3. Set up your environmental variables. Create a `.env` file in the root directory of the project and add the following variables:
+
+    ```plaintext
+    # Example .env file
+    SECRET_KEY=your_secret_key
+    DB_HOST=localhost
+    DB_NAME=ecoguard_db
+    DB_USER=root
+    DB_PASSWORD=
+    ```
+
+    Replace `your_secret_key` with a secure secret key for your application, and update the database-related variables accordingly.
 
 ### Running the Application
 
-1. Start your PHP server. You can use the built-in PHP server:
+1. Place the EcoGuard directory in the `htdocs` folder of your XAMPP installation.
 
-    ```bash
-    php -S localhost:8000
-    ```
-
-2. Access EcoGuard in your web browser at `http://localhost:8000`.
+2. Access EcoGuard in your web browser at `http://localhost/EcoGuard`.
 
 ## Usage
 
