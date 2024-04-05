@@ -8,8 +8,8 @@ EcoGuard is a comprehensive environmental monitoring and protection platform aim
 
 ### Prerequisites
 
-- Python 3.x installed on your system
-- PostgreSQL installed and running on your machine
+- PHP installed on your system
+- MySQL installed and running on your machine
 - Git installed on your system
 
 ### Installation
@@ -26,55 +26,18 @@ EcoGuard is a comprehensive environmental monitoring and protection platform aim
     cd EcoGuard
     ```
 
-3. Create and activate a virtual environment:
-
-    ```bash
-    # Using virtualenv
-    virtualenv venv
-    source venv/bin/activate
-
-    # Using venv
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
-
-4. Install the required dependencies:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
 ### Database Setup
 
-1. Create a new PostgreSQL database for EcoGuard:
+1. Create a new MySQL database for EcoGuard.
 
-    ```bash
-    createdb ecoguard_db
-    ```
-
-2. Set up your environmental variables. Create a `.env` file in the root directory of the project and add the following variables:
-
-    ```plaintext
-    # Example .env file
-    SECRET_KEY=your_secret_key
-    DATABASE_URL=postgres://username:password@localhost/ecoguard_db
-    ```
-
-    Replace `your_secret_key` with a secure secret key for your Django application, `username` and `password` with your PostgreSQL credentials, and `ecoguard_db` with the name of your PostgreSQL database.
-
-3. Apply migrations to create the database schema:
-
-    ```bash
-    python manage.py makemigrations
-    python manage.py migrate
-    ```
+2. Import the SQL schema provided in `database_schema.sql` into your MySQL database.
 
 ### Running the Application
 
-1. Start the Django development server:
+1. Start your PHP server. You can use the built-in PHP server:
 
     ```bash
-    python manage.py runserver
+    php -S localhost:8000
     ```
 
 2. Access EcoGuard in your web browser at `http://localhost:8000`.
